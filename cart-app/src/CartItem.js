@@ -57,21 +57,9 @@ class CartItem extends React.Component{
         //     console.log('this.state',this.state);
         
         // });
-             
+        //hello
        
-        this.setState((prevState) => {
-
-            if(prevState.qty < 9){
-                return {
-                    qty : prevState.qty + 1
-                }
-
-            }
-            else {
-                return null;
-            }
-  
-        });
+      
         
 }
         
