@@ -3,17 +3,7 @@ import React from "react";
 
 class CartItem extends React.Component{
 
-    constructor(){
-        super();
-        this.state = {
-            price: 999,
-            title: 'New phone',
-            qty: 1,
-            img: ''
-        }
-       // this.testing();
-        this.increaseQuantity = this.increaseQuantity.bind(this)
-    }
+   
 
     testing(){
         const promise = new Promise((resolve,reject) => {
@@ -47,16 +37,16 @@ class CartItem extends React.Component{
   
         //setState method-2
 
-        // this.setState((prevState) => {
+        this.setState((prevState) => {
 
-        //         return {
-        //             qty : prevState.qty + 1
-        //         }
+                return {
+                    qty : prevState.qty + 1
+                }
     
-        // },() => {
-        //     console.log('this.state',this.state);
+        },() => {
+            console.log('this.state',this.state);
         
-        // });
+        });
         //new trick
         
        
@@ -85,8 +75,8 @@ class CartItem extends React.Component{
     }
 
     render(){
-        console.log("render")
-        const {price,title,qty} = this.state;
+        console.log("this.props",this.props)
+        const {price,title,qty} = this.props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
@@ -119,7 +109,8 @@ const styles = {
     image : {
         height:110,
         width:110,
-        borderRadius:4
+        borderRadius:4,
+        background:'#ccc'
     }
 }
 
